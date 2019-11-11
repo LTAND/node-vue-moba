@@ -1,0 +1,28 @@
+@url = http://localhost:3000
+@json = Content-Type: application/json
+
+
+### 注册
+post {{url}}/admin/api/register 
+{{json}}
+
+{
+  "username":"admin12311",
+  "password":"12345"
+}
+
+### 获取所有用户
+get {{url}}/admin/api/getusers
+
+
+### 导入新闻数据
+# 插入新闻分类，公告，赛事，新闻，活动
+get {{url}}/web/api/news/init
+
+
+### 导入新闻数据
+# 插入英雄分类，射手，战士，辅助。刺客，法师。坦克
+get {{url}}/web/api/heroes/init
+
+###
+get {{url}}/web/api/heroes/list
